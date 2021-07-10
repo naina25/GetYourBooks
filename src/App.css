@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #3492d1, #6dd5fa, #b7e6f7);
+  background: linear-gradient(to right, #3492d1, #6dd5fa, #c0eafa);
+
+  font-family: "Exo", sans-serif;
+}
+
+header.main-content {
+  width: 50%;
+  margin: auto;
+}
+
+h1 {
+  color: rgb(23, 42, 99);
+  font-weight: 700;
+}
+
+.main-content button {
+  background: none;
+  font-size: 1.2em;
+  background-color: rgb(25, 65, 92);
+  outline: none;
+  border: none;
+  margin: 20px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  color: antiquewhite;
+  cursor: pointer;
+  width: 150px;
+}
+
+button:hover {
+  background: rgb(25, 65, 92) !important;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group .input-control {
+  background: none;
+  outline: none;
+  border: none;
+  margin: 10px 0;
+  border-bottom: 1px solid rgb(130, 134, 138);
+  width: 450px;
+  border-radius: 0;
+}
+
+.form-group .input-control::placeholder {
+  color: rgb(102, 101, 101);
+}
+
+.form-group .input-control:focus {
+  border-bottom: 2px solid rgb(25, 65, 92);
+  color: rgb(25, 65, 92);
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.form-content {
+  width: 500px;
+  border-radius: 25px;
+  background-image: url(https://images.unsplash.com/photo-1468779036391-52341f60b55d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJvb2tzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(81, 122, 148, 1);
+  padding: 30px 0;
+  font-weight: 600;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.form-content .label {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 1.3rem;
+  color: rgb(25, 65, 92);
+}
+
+.form-content .submit-btn {
+  width: 150px;
+  font-size: 1.2rem;
+  background-color: #387896;
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+  header.main-content {
+    width: 65%;
+    margin: auto;
+  }
+}
+
+.App {
+  height: 100vh;
+}
+
+.whole-content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

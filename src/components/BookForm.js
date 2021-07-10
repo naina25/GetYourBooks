@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid"; //do we have this???
 import { Form, Button } from "react-bootstrap";
+import "../App.css";
 
 const BookForm = (props) => {
   // state to store all the entries from Form.
@@ -80,9 +81,10 @@ const BookForm = (props) => {
       {errorMsg && <p className="errorMsg : "> {errorMsg} </p>}
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
-          <Form.Label>Book Name</Form.Label>
+          <Form.Label className="label">Book Name</Form.Label>
           <Form.Control
             className="input-control"
+            autoComplete="off"
             type="text"
             name="bookName"
             value={bookName}
@@ -91,9 +93,10 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="author">
-          <Form.Label>Book Author</Form.Label>
+          <Form.Label className="label">Book Author</Form.Label>
           <Form.Control
             className="input-control"
+            autoComplete="off"
             type="text"
             name="author"
             value={author}
@@ -102,9 +105,10 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="quantity">
-          <Form.Label>Quantity</Form.Label>
+          <Form.Label className="label">Quantity</Form.Label>
           <Form.Control
             className="input-control"
+            autoComplete="off"
             type="text"
             name="quantity"
             value={quantity}
@@ -113,9 +117,10 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="price">
-          <Form.Label>Book Price</Form.Label>
+          <Form.Label className="label">Book Price</Form.Label>
           <Form.Control
             className="input-control"
+            autoComplete="off"
             type="text"
             name="price"
             value={price}
@@ -123,7 +128,7 @@ const BookForm = (props) => {
             onChange={handleInputChange}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" className="submit-btn">
+        <Button type="submit" className="submit-btn">
           Submit
         </Button>
       </Form>

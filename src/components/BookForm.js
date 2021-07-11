@@ -5,12 +5,24 @@ import "../App.css";
 
 const BookForm = (props) => {
   // state to store all the entries from Form.
-  const [book, setBook] = useState({
-    bookName: props.book ? props.book.bookName : "",
-    author: props.book ? props.book.author : "",
-    quantity: props.book ? props.book.quantity : "",
-    price: props.book ? props.book.price : "",
-    date: props.book ? props.book.date : "",
+
+  // const [book, setBook] = useState({
+  //   bookName: props.book ? props.book.bookName : "",
+  //   author: props.book ? props.book.author : "",
+  //   quantity: props.book ? props.book.quantity : "",
+  //   price: props.book ? props.book.price : "",
+  //   date: props.book ? props.book.date : "",
+  // });
+
+  // setting up the states using lazy initialization
+  const [book, setBook] = useState(() => {
+    return {
+      bookName: props.book ? props.book.bookName : "",
+      author: props.book ? props.book.author : "",
+      quantity: props.book ? props.book.quantity : "",
+      price: props.book ? props.book.price : "",
+      date: props.book ? props.book.date : "",
+    };
   });
 
   // state to store error messages after validating the form.

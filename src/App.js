@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
-import { AppRouter } from "./components/Router/AppRouter";
+import { AppRouter } from "./router/AppRouter";
 
 function App() {
   return (

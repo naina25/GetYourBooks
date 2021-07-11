@@ -20,7 +20,12 @@ export const AppRouter = () => {
             )}
             path="/addbook"
           />
-          <Route path="/booklist" exact component={BooksList} />
+          <Route
+            render={(props) => (
+              <BooksList {...props} books={books} setBooks={setBooks} />
+            )}
+            path="/booklist"
+          />
         </Switch>
       </div>
     </BrowserRouter>

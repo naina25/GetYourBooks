@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 
 const useLocalStorage = (key, initialValue) => {
+  // lazy initialization
   const [value, setValue] = useState(() => {
     try {
       const localValue = window.localStorage.getItem(key);
       return localValue ? JSON.parse(localValue) : initialValue;
     } catch (error) {
+      console.log(error);
       return initialValue;
     }
   });

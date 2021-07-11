@@ -13,10 +13,10 @@ const BookForm = (props) => {
     date: props.book ? props.book.date : "",
   });
 
-  // state to store any error message
+  // state to store error messages after validating the form.
   const [errorMsg, setErrorMsg] = useState("");
 
-  //.........
+  //destructuring the state book
   const { bookName, author, price, quantity } = book;
 
   // handling the form submission
